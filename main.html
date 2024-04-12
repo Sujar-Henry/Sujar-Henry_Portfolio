@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/c783ac4029.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sujar's Portfolio Website</title>
+    <link rel="stylesheet" href = "style.css">
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+        <nav>
+           <img src = "portfolio_banner.png"  height="150">
+           <ul>
+            <li><a href = "#">Home</a></li>
+            <li><a href = "#">About</a></li>           
+            <li><a href = "#">Contact</a></li>
+           </ul>
+        </nav>
+        <div class="header-text">
+            <p>Software Engineer</p>
+            <h1>Hello,I'm <span>Sujar</span><br> Henry</h1>
+            <img src="main_image_final.png" style = "height:450px;margin-top: -870px; margin-left: 750px;"  alt=""><!--Edit picture to make it a circle and have it on right side of page.-->
+        </div>
+    </div>
+  </div>
+  <!----- About Section------>
+  <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src = "sujar_picture.JPG" height = "500">
+            </div>
+            <div class="about-col-2">
+                <h1 class = "sub-title">About Me</h1>
+                <p>Hello,my name is Sujar Henry, a Computer Science major at The Catholic University of America. I was interested in technology from a young age so I decided that I would try out Information Technology as a career.
+                I was not interested in that field so during my senior year of highschool I interned as a Software Engineer at Knobull Inc.I have recently been interested in Machine Learning and I have taken courses on LinkedIn in order to develop my skills.      
+                </p>
+                <div class="tab-titles">
+                    <p class = "tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class = "tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class = "tab-links"onclick="opentab('education')">Education</p>
+                    
+                </div>
+                <div class="tab-contents active-tab" id = "skills">
+                    <ul>
+                        <li><span>Software Engineering</span><br>Python,HTML and CSS, C++</li>
+                        <li><span>Machine Learning</span><br>Tensor Flow, Numpy,Pandas,OpenCv</li>
+                        <li><span>Information Technology</span><br>Networks,Wireless,Operating Systems</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id = "experience">
+                    <ul>
+                        <li><span>May 2022 - Aug 2022</span><br>Software Engineer Intern at Knobull Inc.</li>
+                        <li><span>Oct 2020 - Mar 2021</span><br>Volunteer Student Teacher at Holy Family Academy</li>
+                        <li><span>Jun 2019 - Sep 2020</span><br>Assistant Computer Technician</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id = "education">
+                    <ul>
+                        <li><span>Aug 2022 - Present</span><br>The Catholic University of America, BS Computer Science</li>
+                        <li><span>Sep 2018 - Jun 2021</span><br>Holy Family Academy Highschool Diploma</li>
+                        
+                    </ul>
+                </div>      
+                
+            </div>
+           
+        </div>
+    </div>
+  </div> 
+
+  <!----contact------>
+  <div id = "contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class = "sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i> skinghenry@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 5713567863</p>
+                <div class="social-icons">
+                    <a href = "https://www.linkedin.com/in/sujar-henry" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href = "https://github.com/Sujar-Henry" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href = "https://www.instagram.com/sujar_henry/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    
+                </div>
+                <a href ="Resume 28-03-23.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            
+            <div class="contact-right">
+
+            <form>
+                <input type="text" name = "Name" placeholder = "Your name" required>
+                <input type="email" name = "email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder = "Your Message"></textarea>
+                <button type = "submit" class = "btn btn2">Submit</button>
+            </form>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+    
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    
+
+  </script>
+    
+</body>
+</html>
